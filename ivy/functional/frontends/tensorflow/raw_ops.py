@@ -14,7 +14,8 @@ from ivy.func_wrapper import with_unsupported_dtypes
 @to_ivy_arrays_and_back
 def AddN(*, inputs, name="AddN"):
     return ivy.sum(inputs, dtype=inputs.dtype)
-
+def Exit(*,inputs,name="Exit"):
+    return ivy.exit(inputs)
 
 @to_ivy_arrays_and_back
 def Acos(*, x, name="Acos"):
